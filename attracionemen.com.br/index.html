@@ -16,13 +16,12 @@
 	  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
 	var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 	;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-	
-	
-	  ttq.load('CU1HVCRC77U5K61FD8CG');
+	  ttq.load('CU5IISJC77U7P33J14U0');
 	  ttq.page();
 	}(window, document, 'ttq');
 	</script>
 	<!-- TikTok Pixel Code End -->
+	
 
 <!-- Meta Pixel Code -->
 <script>
@@ -1506,6 +1505,45 @@ vgo('process');
             });
         });
     });
+
+	<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Seleciona todos os botões com a classe "elementor-button"
+        var buttons = document.querySelectorAll('.elementor-button');
+
+        // Adiciona o evento de rastreamento para cada botão
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Identifica o botão pelo atributo "href"
+                var href = button.getAttribute('href');
+
+                // Verifica qual botão foi clicado e dispara o evento correspondente
+                if (href.includes('cm5znp7y001c7uwrrlsefzzl4')) {
+                    // Primeiro botão
+                    ttq.track('CompletePayment', {
+                        content_name: 'Oferta 1 - 1 Produto',
+                        value: 109.90,
+                        currency: 'BRL'
+                    });
+                } else if (href.includes('cm5zo5hiu0378uwrr0at7675n')) {
+                    // Segundo botão
+                    ttq.track('CompletePayment', {
+                        content_name: 'Oferta 2 - 3 Produtos',
+                        value: 94.90,
+                        currency: 'BRL'
+                    });
+                } else if (href.includes('cm5zobw5z03y6uwrrbvwsjv5j')) {
+                    // Terceiro botão
+                    ttq.track('CompletePayment', {
+                        content_name: 'Oferta 3 - 2 Produtos',
+                        value: 49.90,
+                        currency: 'BRL'
+                    });
+                }
+            });
+        });
+    });
+</script>
 </script>
 
 
