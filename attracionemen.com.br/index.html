@@ -74,14 +74,6 @@
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="wp-json/oembed/1.0/embed7dce?url=https%3A%2F%2Fattracionemen.com.br%2F&amp;format=xml" />
 <meta name="generator" content="Elementor 3.25.10; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
 
-<script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(e,t.methods[i]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-      ttq.load('CU5SL73C77U5PP3D96MG');
-      ttq.page();
-    }(window, document, 'ttq');
-    </script>
    
 <meta property="og:image" content="https://attracionemen.com.br/wp-content/uploads/2024/11/opengraphattracionemen.webp">
 <!-- Google Tag Manager -->
@@ -1429,28 +1421,28 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
         var buttons = document.querySelectorAll('.elementor-button');
 
         // Adiciona o evento de rastreamento para cada botão
-        buttons.forEach(function(button) {
-            button.addEventListener('click', function() {
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
                 // Identifica o botão pelo atributo "href"
                 var href = button.getAttribute('href');
 
-                // Envia eventos personalizados com base no botão clicado
-                if (href.includes('cm5znp7y001c7uwrrlsefzzl4')) {
-                    // Primeiro botão
+                // Verifica qual botão foi clicado e envia o evento ao TikTok Pixel
+                if (href && href.includes('cm5znp7y001c7uwrrlsefzzl4')) {
+                    // Primeiro botão - 1 Produto
                     ttq.track('CompletePayment', {
                         content_name: 'Oferta 1 - 1 Produto',
                         value: 109.90,
                         currency: 'BRL'
                     });
-                } else if (href.includes('cm5zo5hiu0378uwrr0at7675n')) {
-                    // Segundo botão
+                } else if (href && href.includes('cm5zo5hiu0378uwrr0at7675n')) {
+                    // Segundo botão - 3 Produtos
                     ttq.track('CompletePayment', {
                         content_name: 'Oferta 2 - 3 Produtos',
                         value: 94.90,
                         currency: 'BRL'
                     });
-                } else if (href.includes('cm5zobw5z03y6uwrrbvwsjv5j')) {
-                    // Terceiro botão
+                } else if (href && href.includes('cm5zobw5z03y6uwrrbvwsjv5j')) {
+                    // Terceiro botão - 2 Produtos
                     ttq.track('CompletePayment', {
                         content_name: 'Oferta 3 - 2 Produtos',
                         value: 49.90,
@@ -1461,6 +1453,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
         });
     });
 </script>
+
 
 
 
